@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+html {
+	background-color: #000;
+    height: 100vh;
+    overflow-y: hidden;
+
+    &.show {
+        height: 100%;
+        overflow-y: auto;
+    }
+    @include desktop {
+	    scroll-behavior: smooth;
+    }
+}
+
+body {
+	// background-color: var(--page-bg);
+	color: var(--text-color);
+	font-family: var(--font-main);
+    font-size: var(--text);
+    line-height: 150%;
+	text-wrap: balance;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+	display: block;
+    object-fit: cover;
+}
+
+a {
+	color: var(--text-color);
+}
+

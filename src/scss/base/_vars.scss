@@ -1,0 +1,32 @@
+:root {
+
+    --base: 8px;
+	--container-width: 1200px;
+	--container-padding: var(--base);
+
+    
+	--section-padding: calc(var(--base) * 3);
+
+	--font-main: OpenSans, sans-serif;
+	--font-accent: OpenSans, sans-serif;
+	--font-titles: var(--font-accent);
+
+    --h1: calc(var(--base) * 3);
+    --h2:  calc(var(--base) * 2.5);
+    --text: calc(var(--base) * 2);
+
+	--page-bg: #000;
+	--text-color: #fff;
+	--accent: #EB3F3F;
+	--link-color: #fff;
+
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+.light {
+    --page-bg: #fff;
+    --text-color: #000;
+}

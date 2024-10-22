@@ -1,0 +1,50 @@
+.services {
+    background-color: #fff;
+}
+.services__title {
+    color: #000;
+    text-align: center;
+}
+.services__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.services__grid-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+
+    @include tablet {
+        gap: 16px;
+    }
+
+    
+    @include desktop {
+        gap: 24px;
+    }
+}
+.icon--checked {
+    fill: var(--accent);
+    flex-shrink: 0;
+}
+.services__text {
+    display: flex;
+    flex-direction: column;
+}
+.services__service-title {
+    color: #000;
+}
+.services__service-descr {
+    color: #000;
+}

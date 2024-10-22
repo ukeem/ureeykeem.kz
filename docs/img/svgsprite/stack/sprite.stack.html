@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-call-dims { width: 16px; height: 16px; }
+ .svg-case-dims { width: 21px; height: 18px; }
+ .svg-checked-dims { width: 24px; height: 25px; }
+ .svg-header__nav-btn-dims { width: 16px; height: 16px; }
+ .svg-home-dims { width: 20px; height: 18px; }
+ .svg-loader-dims { width: 200px; height: 200px; }
+ .svg-logo-dims { width: 32px; height: 32px; }
+ .svg-privilege-1-dims { width: 24px; height: 24px; }
+ .svg-privilege-2-dims { width: 26px; height: 26px; }
+ .svg-privilege-3-dims { width: 24px; height: 24px; }
+ .svg-privilege-4-dims { width: 24px; height: 24px; }
+ .svg-reviews-dims { width: 18px; height: 16px; }
+ .svg-service-dims { width: 20px; height: 18px; }
+ .svg-start-dims { width: 18px; height: 18px; }
+ .svg-swipe-dims { width: 18px; height: 16px; }
+ .svg-wa-dims { width: 17px; height: 16px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="call">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#call" class="svg-call-dims" alt="call">
+                    </div>
+                    <h2>call, </h2>
+                </li>
+             <li title="case">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#case" class="svg-case-dims" alt="case">
+                    </div>
+                    <h2>case, </h2>
+                </li>
+             <li title="checked">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#checked" class="svg-checked-dims" alt="checked">
+                    </div>
+                    <h2>checked, </h2>
+                </li>
+             <li title="header__nav-btn">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#header__nav-btn" class="svg-header__nav-btn-dims" alt="header__nav-btn">
+                    </div>
+                    <h2>header__nav-btn, </h2>
+                </li>
+             <li title="home">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#home" class="svg-home-dims" alt="home">
+                    </div>
+                    <h2>home, </h2>
+                </li>
+             <li title="loader">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#loader" class="svg-loader-dims" alt="loader">
+                    </div>
+                    <h2>loader, </h2>
+                </li>
+             <li title="logo">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#logo" class="svg-logo-dims" alt="logo">
+                    </div>
+                    <h2>logo, </h2>
+                </li>
+             <li title="privilege-1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#privilege-1" class="svg-privilege-1-dims" alt="privilege-1">
+                    </div>
+                    <h2>privilege-1, </h2>
+                </li>
+             <li title="privilege-2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#privilege-2" class="svg-privilege-2-dims" alt="privilege-2">
+                    </div>
+                    <h2>privilege-2, </h2>
+                </li>
+             <li title="privilege-3">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#privilege-3" class="svg-privilege-3-dims" alt="privilege-3">
+                    </div>
+                    <h2>privilege-3, </h2>
+                </li>
+             <li title="privilege-4">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#privilege-4" class="svg-privilege-4-dims" alt="privilege-4">
+                    </div>
+                    <h2>privilege-4, </h2>
+                </li>
+             <li title="reviews">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#reviews" class="svg-reviews-dims" alt="reviews">
+                    </div>
+                    <h2>reviews, </h2>
+                </li>
+             <li title="service">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#service" class="svg-service-dims" alt="service">
+                    </div>
+                    <h2>service, </h2>
+                </li>
+             <li title="start">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#start" class="svg-start-dims" alt="start">
+                    </div>
+                    <h2>start, </h2>
+                </li>
+             <li title="swipe">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#swipe" class="svg-swipe-dims" alt="swipe">
+                    </div>
+                    <h2>swipe, </h2>
+                </li>
+             <li title="wa">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#wa" class="svg-wa-dims" alt="wa">
+                    </div>
+                    <h2>wa, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Tue, 22 Oct 2024 16:31:22 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

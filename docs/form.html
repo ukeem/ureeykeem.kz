@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Бриф-анкета для разработки сайта</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script><script>
+        function toggleOtherInput(radioGroupName, otherInputId) {
+            // Получаем все элементы радио-кнопок с заданным именем
+            let radioGroup = document.getElementsByName(radioGroupName);
+            let otherInput = document.getElementById(otherInputId);
+        
+            // Проходим по каждому радио-элементу
+            for (let i = 0; i < radioGroup.length; i++) {
+                let radio = radioGroup[i];
+        
+                // Если элемент выбран и его значение равно 'other'
+                if (radio.checked && radio.value === 'other') {
+                    otherInput.style.display = 'block';  // Показываем текстовое поле
+                } else if (radio.checked) {
+                    otherInput.style.display = 'none';   // Скрываем текстовое поле, если выбран другой вариант
+                }
+            }
+        }
+        
+    </script><script async src="https://www.googletagmanager.com/gtag/js?id=AW-16735051341">
+	</script><script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'AW-16735051341');
+	</script><script>
+	function gtag_report_conversion(url) {
+	  var callback = function () {
+		if (typeof(url) != 'undefined') {
+		  window.location = url;
+		}
+	  };
+	  gtag('event', 'conversion', {
+		  'send_to': 'AW-16735051341/Nf7oCOnqg94ZEM288qs-',
+		  'value': 1.0,
+		  'currency': 'USD',
+		  'event_callback': callback
+	  });
+	  return false;
+	}
+	</script><style>
+        h4 {
+            color: #212529;
+            font-size: 20px;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #0a58ca;
+            font-size: 18px;
+        }
+        ::placeholder {
+            font-style: italic;
+            color: gray;
+            font-size: 14px;
+        }
+        .form-check-label {
+            color: #343a40;
+            font-size: 16px;
+        }
+    </style><script src="https://www.google.com/recaptcha/enterprise.js?render=6LfZAWYqAAAAAFBQdv0m598LnOg-7VDfytmwhica"></script></head><body><div class="container mt-5" style="max-width: 768px;"><h1 class="mb-5 text-center">Бриф-анкета</h1><form><h4>1. Информация о&#160;компании</h4><div class="mb-3"> <label for="companyName" class="form-label">Название компании:</label> <input type="text" class="form-control" id="companyName" placeholder="Введите название вашей компании" name="companyName"></div><div class="mb-3"> <label class="form-label">Вид деятельности/отрасль:</label><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Производство" id="industry1" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry1">Производство</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Услуги" id="industry2" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry2">Услуги</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Розничная торговля" id="industry3" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry3">Розничная торговля</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Оптовая торговля" id="industry4" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry4">Оптовая торговля</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="IT и технологии" id="industry5" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry5">IT&#160;и&#160;технологии</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Финансовые услуги" id="industry6" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry6">Финансовые услуги</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Образование" id="industry7" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry7">Образование</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="Здравоохранение" id="industry8" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry8">Здравоохранение</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="industry" value="other" id="industry9" onclick="toggleOtherInput('industry', 'industryOtherInput')"> <label class="form-check-label" for="industry9">Другие (укажите)</label></div><div class="mb-3" id="industryOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите отрасль" name="industryOther"></div></div><div class="mb-5"> <label for="website" class="form-label">Веб-сайт (если есть):</label> <input type="text" class="form-control" id="website" name="website" placeholder="Укажите ссылку вашего текущего сайта (если есть)"></div><h4>2. Цели создания сайта</h4><div class="mb-3"> <label class="form-label">Какую задачу должен решить сайт?</label><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="Повышение продаж" id="goal1" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal1">Повышение продаж</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="Увеличение числа лидов" id="goal2" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal2">Увеличение числа лидов</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="Информирование клиентов" id="goal3" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal3">Информирование клиентов</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="Брендирование" id="goal4" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal4">Брендирование</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="Поддержка существующих клиентов" id="goal5" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal5">Поддержка существующих клиентов</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="Поддержка существующих клиентов" id="goal6" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal6">Улучшение имиджа компании</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="goal" value="other" id="goal7" onclick="toggleOtherInput('goal', 'goalOtherInput')"> <label class="form-check-label" for="goal7">Другую (укажите)</label></div><div class="mb-3" id="goalOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите цель" name="goalOther"></div></div><div class="mb-3"> <label for="exampleSites" class="form-label">Есть&#160;ли примеры сайтов, которые вам нравятся?</label><textarea class="form-control" id="exampleSites" rows="4" name="exampleSites" placeholder="Укажите ссылки на сайты, которые вам нравятся, и кратко опишите, что именно привлекло (например, дизайн, функционал, структура)"></textarea></div><div class="mb-5"> <label class="form-label">Кто ваша целевая аудитория?</label><div class="form-check mb-3"> <label class="form-label" for="targetAudienceAge1">Возраст</label> <input class="form-control" type="text" name="targetAudienceAge" id="targetAudienceAge1" placeholder="Укажите диапазон, например: 18-25, 25-35, 35-50 и т.д."></div><div class="form-check mb-3"> <label class="form-label">Пол:</label><div class="form-check"> <input class="form-check-input" type="radio" name="targetAudienceGender" value="Мужчины" id="targetAudienceGender1"> <label class="form-check-label" for="targetAudienceGender1">Мужчины</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="targetAudienceGender" value="Женщины" id="targetAudienceGender2"> <label class="form-check-label" for="targetAudienceGender2">Женщины</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="targetAudienceGender" value="Оба пола" id="targetAudienceGender3"> <label class="form-check-label" for="targetAudienceGender3">Оба пола</label></div></div><div class="form-check mb-3"> <label class="form-label" for="targetAudienceGeography1">География</label> <input class="form-control" type="text" name="targetAudienceGeography" id="targetAudienceGeography1" placeholder="Город/Регион/Cтрана"></div></div><h4>3. Тип сайта</h4><div class="mb-3"> <label class="form-label">Какой тип сайта вам необходим?</label><div class="form-check"> <input class="form-check-input" type="radio" name="siteType" value="Лендинг (Одностраничный сайт)" id="siteType1" onclick="toggleOtherInput('siteType', 'siteTypeOtherInput')"> <label class="form-check-label" for="siteType1">Лендинг (Одностраничный сайт)</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="siteType" value="Корпоративный (Многостраничный сайт)" id="siteType2" onclick="toggleOtherInput('siteType', 'siteTypeOtherInput')"> <label class="form-check-label" for="siteType2">Корпоративный (Многостраничный сайт)</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="siteType" value="Интернет-магазин" id="siteType3" onclick="toggleOtherInput('siteType', 'siteTypeOtherInput')"> <label class="form-check-label" for="siteType3">Интернет-магазин</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="siteType" value="Сайт-визитка" id="siteType4" onclick="toggleOtherInput('siteType', 'siteTypeOtherInput')"> <label class="form-check-label" for="siteType4">Сайт-визитка</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="siteType" value="other" id="siteTypeOther" onclick="toggleOtherInput('siteType', 'siteTypeOtherInput')"> <label class="form-check-label" for="siteTypeOther">Другой (укажите)</label></div><div class="mb-3" id="siteTypeOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите тип сайта" name="siteTypeOther"></div></div><div class="mb-3"> <label class="form-label">Примерное количество страниц</label><div class="form-check"> <input class="form-check-input" type="radio" name="numberOfPages" value="1-5 страниц" id="numberOfPages1"> <label class="form-check-label" for="numberOfPages1">1-5 страниц</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="numberOfPages" value="5-10 страниц" id="numberOfPages2"> <label class="form-check-label" for="numberOfPages2">5-10 страниц</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="numberOfPages" value="10-20 страниц" id="numberOfPages3"> <label class="form-check-label" for="numberOfPages3">10-20 страниц</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="numberOfPages" value="Более 20 страниц" id="numberOfPages4"> <label class="form-check-label" for="numberOfPages4">Более 20 страниц</label></div></div><div class="mb-5"> <label class="form-label">Нужна&#160;ли интеграция с&#160;CRM, системами аналитики или платежными системами?</label><div class="form-check"> <input class="form-check-input" type="checkbox" name="crm" value="other" id="crmIntegration" onclick="toggleOtherInput('crm', 'crmIntegrationOtherInput')"> <label class="form-check-label" for="crmIntegration">Да, с&#160;CRM (укажите, с&#160;какой)</label></div><div class="mb-3" id="crmIntegrationOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите название CRM" name="crmIntegration"></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="analytics" value="other" id="analyticsIntegration" onclick="toggleOtherInput('analytics', 'analyticsIntegrationOtherInput')"> <label class="form-check-label" for="analyticsIntegration">Да, с&#160;системами аналитики (Google Analytics, Яндекс.Метрика и&#160;т.&#160;д.)</label></div><div class="mb-3" id="analyticsIntegrationOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите системы аналитики" name="analyticsIntegration"></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="payment" value="other" id="paymentSystemIntegration" onclick="toggleOtherInput('payment', 'paymentSystemIntegrationOtherInput')"> <label class="form-check-label" for="paymentSystemIntegration">Да, с&#160;платежными системами (укажите, с&#160;какими)</label></div><div class="mb-3" id="paymentSystemIntegrationOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите системы платежей" name="paymentSystemIntegration"></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="noIntegration" value="Нет, интеграция не требуется" id="noIntegration"> <label class="form-check-label" for="noIntegration">Нет, интеграция не&#160;требуется</label></div></div><h4>4. Дизайн и&#160;функциональность</h4><div class="mb-3"> <label class="form-label">Есть&#160;ли предпочтения по&#160;стилю дизайна?</label><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Минимализм" id="designStyle1"> <label class="form-check-label" for="designStyle1">Минимализм</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Современный" id="designStyle2"> <label class="form-check-label" for="designStyle2">Современный</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Классический" id="designStyle3"> <label class="form-check-label" for="designStyle3">Классический</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Яркий" id="designStyle4"> <label class="form-check-label" for="designStyle4">Яркий</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Строгий" id="designStyle5"> <label class="form-check-label" for="designStyle5">Строгий</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Лаконичный" id="designStyle6"> <label class="form-check-label" for="designStyle6">Лаконичный</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="designStyle" value="Не уверен, помогите с выбором" id="designStyle7"> <label class="form-check-label" for="designStyle7">Не&#160;уверен, помогите с&#160;выбором</label></div></div><div class="mb-3"> <label class="form-label">Какие функции должны быть реализованы?</label><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Форма обратной связи" id="features1"> <label class="form-check-label" for="features1">Форма обратной связи</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Онлайн-чат" id="features2"> <label class="form-check-label" for="features2">Онлайн-чат</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Каталог товаров/услуг" id="features3"> <label class="form-check-label" for="features3">Каталог товаров/услуг</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Фильтры для поиска товаров/услуг" id="features4"> <label class="form-check-label" for="features4">Фильтры для поиска товаров/услуг</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Блог" id="features5"> <label class="form-check-label" for="features5">Блог</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Личный кабинет пользователя" id="features6"> <label class="form-check-label" for="features6">Личный кабинет пользователя</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Галерея изображений" id="features7"> <label class="form-check-label" for="features7">Галерея изображений</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Видео-контент" id="features8"> <label class="form-check-label" for="features8">Видео-контент</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Мультиязычность (несколько языков)" id="features9"> <label class="form-check-label" for="features9">Мультиязычность (несколько языков)</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Калькулятор стоимости" id="features10"> <label class="form-check-label" for="features10">Калькулятор стоимости</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Интеграция с соцсетями" id="features11"> <label class="form-check-label" for="features11">Интеграция с&#160;соцсетями</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="Подписка на новости" id="features12"> <label class="form-check-label" for="features12">Подписка на&#160;новости</label></div><div class="form-check"> <input class="form-check-input" type="checkbox" name="features" value="other" id="featuresOther" onclick="toggleOtherInput('features', 'featuresOtherInput')"> <label class="form-check-label" for="featuresOther">Другие (укажите)</label></div><div class="mb-3" id="featuresOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите функции" name="featuresOther"></div></div><div class="mb-5"> <label class="form-label">Требуется&#160;ли адаптация сайта под мобильные устройства?</label><div class="form-check"> <input class="form-check-input" type="radio" name="mobileAdaptation" value="Да, обязательно" id="mobileAdaptation1"> <label class="form-check-label" for="mobileAdaptation1">Да, обязательно</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="mobileAdaptation" value="Нет, не требуется" id="mobileAdaptation2"> <label class="form-check-label" for="mobileAdaptation2">Нет, не&#160;требуется</label></div></div><h4>5. Контент</h4><div class="mb-5"> <label class="form-label">Есть&#160;ли у&#160;вас готовый контент для сайта?</label><div class="form-check"> <input class="form-check-input" type="radio" name="content" value="Да, весь контент уже готов" id="content1"> <label class="form-check-label" for="content1">Да, весь контент уже готов</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="content" value="Часть контента готова" id="content2"> <label class="form-check-label" for="content2">Часть контента готова, нужно помочь с&#160;созданием</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="content" value="Контент отсутствует, нужно помочь с созданием" id="content3"> <label class="form-check-label" for="content3">Контент отсутствует, нужно помочь с&#160;созданием</label></div></div><h4>7. Сроки и&#160;бюджет</h4><div class="mb-3"> <label class="form-label">Есть&#160;ли у&#160;вас примерные сроки запуска сайта?</label><div class="form-check"> <input class="form-check-input" type="radio" name="deadline" value="1-2 недели" id="deadline1"> <label class="form-check-label" for="deadline1">1-2 недели</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="deadline" value="3-4 недели" id="deadline2"> <label class="form-check-label" for="deadline2">3-4 недели</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="deadline" value="1-2 месяца" id="deadline3"> <label class="form-check-label" for="deadline3">1-2 месяца</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="deadline" value="Более 2 месяцев" id="deadline4"> <label class="form-check-label" for="deadline4">Более 2 месяцев</label></div></div><div class="mb-5"> <label class="form-label">Какой бюджет вы&#160;готовы выделить на&#160;проект?</label><div class="form-check"> <input class="form-check-input" type="radio" name="budget" value="До 300 000 тг" id="budget1" onclick="toggleOtherInput('budget', 'budgetOtherInput')"> <label class="form-check-label" for="budget1">До&#160;300 000 тг</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="budget" value="300 000 - 600 000 тг" id="budget2" onclick="toggleOtherInput('budget', 'budgetOtherInput')"> <label class="form-check-label" for="budget2">300 000&#160;&#8212; 600 000 тг</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="budget" value="600 000 - 1 000 000 тг" id="budget3" onclick="toggleOtherInput('budget', 'budgetOtherInput')"> <label class="form-check-label" for="budget3">600 000&#160;&#8212; 1 000 000 тг</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="budget" value="Более 1 000 000 тг" id="budget4" onclick="toggleOtherInput('budget', 'budgetOtherInput')"> <label class="form-check-label" for="budget4">Более 1 000 000 тг</label></div><div class="form-check"> <input class="form-check-input" type="radio" name="budget" value="other" id="budgetOther" onclick="toggleOtherInput('budget', 'budgetOtherInput')"> <label class="form-check-label" for="budgetOther">Другой (укажите)</label></div><div class="mb-3" id="budgetOtherInput" style="display: none;"> <input type="text" class="form-control" placeholder="Укажите бюджет" name="budgetOther"></div></div><h4>8. Дополнительные пожелания</h4><div class="mb-5"> <label for="additionalComments" class="form-label">Есть&#160;ли что-то, что мы&#160;не&#160;учли, но&#160;важно для вашего проекта?</label><textarea class="form-control" id="additionalComments" rows="4" placeholder="Оставьте любые дополнительные комментарии или пожелания" name="additionalComments"></textarea></div><h4>9. Ваши контакты</h4><div class="mb-3"> <label for="name" class="form-label">Ваше имя</label> <input class="form-control" id="name" name="name" type="text" placeholder="Введите ваше имя"></div><div class="mb-5"> <label for="phone" class="form-label">Номер телефона с&#160;Whatsapp</label> <input class="form-control" id="phone" name="phone" type="tel" placeholder="Введите номер телефона с Whatsapp"></div> <button type="submit" class="btn btn-success mt-3 mb-5 w-100">Отправить анкету</button></form></div><script>
+		const form = document.querySelector('form');
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault(); // Предотвращаем перезагрузку страницы
+			const tokens = await grecaptcha.enterprise.execute('6LfZAWYqAAAAAFBQdv0m598LnOg-7VDfytmwhica', { action: 'LOGIN' });
+
+			// Добавляем токен в скрытое поле формы
+			const input = document.createElement('input');
+			input.setAttribute('type', 'hidden');
+			input.setAttribute('name', 'recaptcha_token');
+			input.setAttribute('value', tokens);
+			form.appendChild(input);
+
+			gtag_report_conversion();
+			const submitBtn = document.querySelector('button[type=submit]');
+			submitBtn.disabled = true;
+			submitBtn.innerHTML = `
+						<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+						Отправляем...
+					`;
+			// Собираем данные из формы
+			const formData = new FormData(e.target);
+
+			// 1. Информация о компании
+			const companyName = formData.get('companyName') || 'Не указано';
+			const industry = formData.get('industry') || 'Не указано';
+			const industryOther = formData.get('industryOther') || 'Не указано';
+			const website = formData.get('website') || 'Не указано';
+
+			// 2. Цели создания сайта
+			const goal = formData.get('goal') || 'Не указано';
+			const goalOther = formData.get('goalOther') || 'Не указано';
+			const exampleSites = formData.get('exampleSites') || 'Не указано';
+			const targetAudienceAge = formData.get('targetAudienceAge') || 'Не указано';
+			const targetAudienceGender = formData.get('targetAudienceGender') || 'Не указано';
+			const targetAudienceGeography = formData.get('targetAudienceGeography') || 'Не указано';
+			const targetAudienceInterests = formData.get('targetAudienceInterests') || 'Не указано';
+
+			// 3. Тип сайта
+			const siteType = formData.get('siteType') || 'Не указано';
+			const siteTypeOther = formData.get('siteTypeOther') || 'Не указано';
+			const numberOfPages = formData.get('numberOfPages') || 'Не указано';
+			const crmIntegration = formData.getAll('crmIntegration').join(', ') || 'Не указано';
+			const analyticsIntegration = formData.getAll('analyticsIntegration').join(', ') || 'Не указано';
+			const paymentSystemIntegration = formData.getAll('paymentSystemIntegration').join(', ') || 'Не указано';
+			const noIntegration = formData.getAll('noIntegration').join(', ') || 'Не указано';
+
+			// 4. Дизайн и функциональность
+			const designStyle = formData.getAll('designStyle').join(', ') || 'Не указано';
+			const features = formData.getAll('features').join(', ') || 'Не указано';
+			const featuresOther = formData.getAll('featuresOther').join(', ') || 'Не указано';
+			const mobileAdaptation = formData.get('mobileAdaptation') || 'Не указано';
+
+			// 5. Контент
+			const content = formData.get('content') || 'Не указано';
+
+			// 7. Сроки и бюджет
+			const deadline = formData.get('deadline') || 'Не указано';
+			const budget = formData.get('budget') || 'Не указано';
+			const budgetOther = formData.get('budgetOther') || 'Не указано';
+
+			// 8. Дополнительные пожелания
+			const additionalComments = formData.get('additionalComments') || 'Нет комментариев';
+
+			const name = formData.get('name') || 'Не указано';
+			const phone = formData.get('phone') || 'Не указано';
+
+			// Формируем сообщение для отправки
+			let message = "📋 *Бриф-анкета*\n\n";
+			message += `*Название компании*: ${companyName}\n\n`;
+			message += `*Вид деятельности*: ${industry}${industry === 'other' && industryOther ? ` (${industryOther})` : ''}\n\n`;
+			message += `*Веб-сайт*: ${website}\n\n`;
+
+			message += `*Цели создания сайта*\n`;
+			message += `Цель: ${goal}${goal === 'other' && goalOther ? ` (${goalOther})` : ''}\n`;
+			message += `Примеры сайтов: ${exampleSites}\n`;
+			message += `Целевая аудитория:\n-возраст: ${targetAudienceAge},\n-пол: ${targetAudienceGender},\n-география: ${targetAudienceGeography}\n\n`;
+
+			message += `*Тип сайта*: ${siteType}${siteType === 'other' && siteTypeOther ? ` (${siteTypeOther})` : ''}\n`;
+			message += `Количество страниц: ${numberOfPages}\n`;
+			message += `Интеграции:\n-CRM - ${crmIntegration},\n-Аналитика - ${analyticsIntegration},\n-Платежные системы - ${paymentSystemIntegration},\n ${noIntegration}\n\n`;
+
+			message += `*Дизайн и функциональность*\n`;
+			message += `Стиль дизайна: ${designStyle}\n`;
+			message += `Необходимые функции: ${features}, ${features === 'other' && featuresOther ? ` (${featuresOther})` : ''}\n`;
+			message += `Адаптация под мобильные устройства: ${mobileAdaptation}\n\n`;
+
+			message += `*Контент*\n`;
+			message += `${content}\n\n`;
+
+			message += `*Сроки и бюджет*\n`;
+			message += `Сроки: ${deadline}\n`;
+			message += `Бюджет: ${budget}${budget === 'other' && budgetOther ? ` (${budgetOther})` : ''}\n\n`;
+
+			message += `*Дополнительные пожелания*\n`;
+			message += `${additionalComments}\n\n`;
+
+			message += `*Контакты*\n`;
+			message += `*Имя* - ${name}\n`;
+			message += `*Телефон* - ${phone}\n`;
+
+			// Telegram Bot API Token и Chat ID
+			const token = '6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo';
+			const chat_id = '1709865539';
+
+			// URL для отправки сообщения в Telegram
+			const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+			// Данные для отправки через Telegram API
+			const data = {
+				chat_id: chat_id,
+				text: message,
+				parse_mode: 'Markdown'
+			};
+
+			// Отправка данных через fetch
+			fetch(url, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			})
+				.then(response => response.json())
+				.then(result => {
+				if (result.ok) {
+					alert('Анкета успешно отправлена');
+					this.reset();
+					window.location.href = '/';
+				} else {
+					alert('Ошибка при отправке анкеты. Попробуйте позже.');
+				}
+			})
+				.catch(error => {
+				console.error('Ошибка:', error);
+				alert('Ошибка при отправке анкеты.');
+			});
+			
+        });
+        
+        document.getElementById('phone').addEventListener('input', function (e) {
+            let input = e.target;
+            let value = input.value.replace(/\D/g, ''); // Удаляем все, что не является цифрой
+            let formattedValue = '';
+
+            if (value.length > 0) {
+                formattedValue = '+7 ';
+            }
+            if (value.length > 1) {
+                formattedValue += '(' + value.substring(1, 4);
+            }
+            if (value.length >= 5) {
+                formattedValue += ') ' + value.substring(4, 7);
+            }
+            if (value.length >= 8) {
+                formattedValue += '-' + value.substring(7, 9);
+            }
+            if (value.length >= 10) {
+                formattedValue += '-' + value.substring(9, 11);
+            }
+
+            input.value = formattedValue;  // Применяем отформатированное значение
+        });
+    </script></body></html>

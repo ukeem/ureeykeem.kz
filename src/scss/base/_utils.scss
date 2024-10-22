@@ -1,0 +1,129 @@
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}
+.flex {
+    display: flex !important;
+}
+
+.section-padding {
+    padding: 72px 0 48px;
+}
+
+.section-main-title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include tablet {
+        margin-bottom: 36px;
+        font-size: 28px;
+    }
+
+    
+    @include desktop {
+        margin-bottom: 48px;
+        font-size: 32px;
+    }
+}
+.item-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include tablet {
+        font-size: 17px;
+    }
+
+    
+    @include desktop {
+        font-size: 18px;
+    }
+}
+
+.item-descr {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include tablet {
+        font-size: 15px;
+    }
+
+    
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+
+.fadeInLeft {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.fadeInLeft.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fadeInRight {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.fadeInRight.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fadeInUp {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.fadeInUp.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fadeInBottom {
+    opacity: 0;
+    transform: scale(.7);
+    transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.fadeInBottom.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.fade.visible {
+    opacity: 1;
+}

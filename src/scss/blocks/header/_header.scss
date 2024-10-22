@@ -1,0 +1,213 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: calc(var(--base) * 6);
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+
+    &.fadeIn {
+        transform: translateY(0);
+    }
+}
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo__text {
+    span {
+        display: inline-block;
+        font-weight: 600;
+        font-size: var(--h1);
+        line-height: 100%;
+        color: var(--accent);
+        text-transform: uppercase;
+        &:last-child {
+            color: #fff;
+        }
+    }
+}
+.header__nav {
+    background: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: calc(var(--base) * 6);
+    bottom: 0;
+    height: calc(100vh - (var(--base) * 6));
+    width: 100%;
+    transform: translateY(30%);
+    opacity: 0;
+    z-index: 10000;
+    transition: visibility .3s ease-out, transform .3s ease-out, opacity .3s ease-out;
+    &.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    li {
+        padding: 16px 0;
+
+        a {
+            font-weight: 400;
+            font-size: var(--h2);
+            line-height: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            transition: color .3s ease;
+
+            svg {
+                width: var(--h2);
+                height: var(--h2);
+                stroke: #fff;
+                transition: stroke .3s ease;
+                display: inline-block;
+                margin-right: 8px;
+
+                &.icon--reviews, &.icon--wa {
+                    transition: fill .3s ease;
+                    stroke: transparent;
+                    fill: #fff;
+                }
+            }
+
+            &:hover, &:active {
+                color: var(--accent);
+
+                svg {
+                    stroke: var(--accent);
+
+                    &.icon--reviews, &.icon--wa {
+                        stroke: transparent;
+                        fill: var(--accent);
+                    }
+                }
+            }
+
+            &.active {
+                color: var(--accent);
+
+                svg {
+                    stroke: var(--accent);
+
+                    &.icon--reviews, &.icon--wa {
+                        fill: var(--accent);
+                    }
+                }
+            }
+
+            
+        }
+
+        &:last-child {
+
+            a {
+                background-color: var(--accent);
+                border: 1px solid var(--accent);
+                border-radius: 8px;
+                font-size: var(--text);
+                padding: 8px 24px;
+                display: inline-flex;
+                transition: color .3s ease, background-color .3s ease;
+
+                &:hover, &:active {
+                    background-color: transparent;
+                    color: var(--accent);
+                }
+
+                &.active {
+                    background-color: transparent;
+                    color: var(--accent);
+    
+                    svg {
+                        &.icon--wa {
+                            stroke: transparent;
+                            fill: var(--accent);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.header__nav-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #fff;
+
+    .menu {
+        display: none;
+    }
+
+    
+    @include desktop {
+        border: 1px solid var(--accent);
+        background-color: var(--accent);
+        width: 100%;
+        max-width: 96px;
+        padding: 0 16px;
+        transition: width 0.3s ease, background-color 0.3s ease;
+
+        &:hover, &:active {
+            background-color: transparent;
+
+            .menu {
+                color: var(--accent);
+            }
+        }
+
+        .menu {
+            display: block;
+            color: #fff;
+            transition: color 0.3s ease;
+            
+        }
+
+        &.active {
+            background-color: transparent;
+        }
+    }
+
+    .icon--header__nav-btn {
+        fill: #fff;
+        width: 16px;
+        height: 16px;
+        transition: fill .3s ease-out, transform .3s ease-out;
+    
+        &:hover, &:active {
+            fill: var(--accent);
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+    
+    &.active {
+
+        .icon--header__nav-btn {
+            transform: rotate(225deg);
+        }
+    }
+}
+

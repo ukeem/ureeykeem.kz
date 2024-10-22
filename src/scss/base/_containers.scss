@@ -1,0 +1,21 @@
+
+/* Контейнеры */
+.container {
+    position: relative;
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+
+	max-width: var(--container-width);
+	width: 100%;
+
+    
+
+    @include tablet {
+        padding: 0 16px;
+    }
+
+    
+    @include desktop {
+        padding: 0 24px;
+    }
+}

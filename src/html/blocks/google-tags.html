@@ -1,0 +1,52 @@
+<!-- Google tag (gtag.js) Lazy Load -->
+<script>
+    document.addEventListener('load', function() {
+        var lazyLoadGTM = function() {
+            // Добавляем тег асинхронно
+            var gtmScript = document.createElement('script');
+            gtmScript.async = true;
+            gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16735051341';
+            document.head.appendChild(gtmScript);
+
+            gtmScript.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-16735051341');
+            };
+        };
+
+        var lazyLoadInitiated = false;
+
+        var triggerLazyLoad = function() {
+            if (!lazyLoadInitiated) {
+                lazyLoadGTM();
+                lazyLoadInitiated = true;
+            }
+        };
+
+        // События для загрузки при взаимодействии пользователя
+        window.addEventListener('scroll', triggerLazyLoad);
+        window.addEventListener('click', triggerLazyLoad);
+        window.addEventListener('mousemove', triggerLazyLoad);
+        window.addEventListener('touchstart', triggerLazyLoad);
+    });
+</script>
+
+<!-- Event snippet for form conversion page -->
+<script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16735051341/Nf7oCOnqg94ZEM288qs-',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+    }
+</script>
